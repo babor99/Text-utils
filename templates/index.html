@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextUtils</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+        </nav>
+        <h2>Enter your text to analyze.</h2>
+        <form action="analyze" method="post">
+            {% csrf_token %}
+            <textarea name="text" style="margin: 0px; width: 1280px; height: 350px;"></textarea><br>
+            <input type="checkbox" name="removepunc">Remove Punctuation<br>
+            <input type="checkbox" name="capitalize">UPPER CASE ALL<br>
+            <input type="checkbox" name="extraspaceremove">Remove extra space<br>
+            <input type="checkbox" name="newlineremove">Remove newline<br>
+            <input type="Submit">
+        </form>
+
+    </div>
+</body>
+</html>
